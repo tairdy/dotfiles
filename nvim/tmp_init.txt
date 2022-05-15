@@ -1,0 +1,135 @@
+set shell=fish
+"set statusline^=%{coc#status()}
+set statusline+=%F
+
+set number
+set list
+set shiftwidth=2
+set autoindent
+set smartindent
+set expandtab
+set encoding=utf-8
+set fileencoding=utf-8
+set cursorline
+set showmode
+set title
+set laststatus=2
+set ai
+set si
+set clipboard+=unnamed
+
+syntax enable
+filetype plugin indent on
+
+if exists("&termguicolors") && exists("&winblend")
+  syntax enable
+  set termguicolors
+  set winblend=0
+  set wildoptions=pum
+  set pumblend=5
+  set background=dark
+  " Use NeoSolarized
+  let g:neosolarized_termtrans=1
+  runtime ./colors/NeoSolarized.vim
+  colorscheme NeoSolarized
+endif
+
+
+
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'overcache/NeoSolarized'
+Plug 'cohama/lexima.vim'
+Plug 'lambdalisue/fern.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lua/completion-nvim'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'preservim/nerdtree'
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'pangloss/vim-javascript'
+"Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'wbthomason/packer.nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+" autocomplete setting
+"let g:node_client_debug = 1
+
+au BufNewFile,BufRead *.fish set filetype=fish
+let g:fern#default_hidden = 1
+
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+
+  },
+}
+EOF
+
+"tsserver
+lua <<EOF
+  local lspconfig = require("lspconfig")
+  require'lspconfig'.tsserver.setup{}
+EOF
+
+
+
+
+
+"Telescope shortcut
+nnoremap <silent> ;f <Cmd>Telescope find_files<CR>
+nnoremap <silent> ;r <Cmd>Telescope live_grep<CR>
+nnoremap <silent> \\ <Cmd>Telescope buffers<CR>
+nnoremap <silent> ;; <Cmd>Telescope help_tags<CR>  
+"NERDTree shortcut
+nnoremap <c-n> :NERDTree<CR>
+nnoremap <c-t> :NERDTreeToggle<CR>
+nnoremap <c-f> :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+
+
+
+"Prettier setup
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+
+
+lua <<EOF
+local actions = require('telescope.actions')
+
+require('telescope').setup{
+  defaults = {
+    mappings = {
+        n ={
+           ["q"] = actions.close
+        }, 
+    },
+  },
+}
+EOF
+
+
+" vim airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='solarized_flood'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_c = '%F'
