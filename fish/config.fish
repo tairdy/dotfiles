@@ -18,8 +18,7 @@ set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 set -gx EDITOR nvim
-set -x OPENAI_API_KEY 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
-
+set -x OPENAI_API_KEY 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH /opt/homebrew/bin $PATH
