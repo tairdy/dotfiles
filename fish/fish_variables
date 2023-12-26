@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export OPENAI_API_KEY:sk\x2dum3SSbEId7PiMN1w0v7nT3BlbkFJCicXbZo9z9cMUv0cXTtq
+SETUVAR --export OPENAI_API_KEY:\x1d
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/Users/tairdy/\x2elocal/share/z/data
@@ -38,4 +38,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/tairdy/\x2epyenv/bin\x1e/Users/tairdy/opt/anaconda3/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/tairdy/opt/anaconda3/bin\x1e/Users/tairdy/\x2epyenv/bin\x1e/opt/homebrew/bin
