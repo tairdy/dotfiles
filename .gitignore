@@ -1,4 +1,5 @@
 nvim/lazy-lock.json
+nvim/lazyvim.json
 lazy-lock.json
 .DS_Store
 configstore/
@@ -11,3 +12,4 @@ nvim-tmp/
 tmp.txt
 yarn/
 fish/fish_variables
+
