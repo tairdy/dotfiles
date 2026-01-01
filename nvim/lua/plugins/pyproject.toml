@@ -1,0 +1,8 @@
+[tool.ruff]
+line-length = 88
+extend-ignore = [
+  "E203",  # blackと衝突（: の前のスペース）
+  "W503",  # blackと衝突（行頭の演算子）
+  "F401",  # 未使用import（pyrightと重複）
+  "F841",  # 未使用変数（pyrightと重複）
+]
