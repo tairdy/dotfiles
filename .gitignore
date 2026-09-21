@@ -1,0 +1,14 @@
+# secrets / credentials
+openshell/
+pip/pip.conf
+gh/hosts.yml
+raycast/
+
+# caches, logs, runtime state
+herdr/
+cagent/
+uv/uv-receipt.json
+zed/prompts/
+
+# embedded git repositories
+rio/rio-terminal/
