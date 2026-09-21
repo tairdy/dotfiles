@@ -21,7 +21,7 @@ vim.opt.shell = "fish"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
-vim.opt.wrap = false
+vim.opt.wrap = true 
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

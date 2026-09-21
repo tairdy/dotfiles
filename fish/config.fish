@@ -58,5 +58,4 @@ set -x PATH "/Library/Frameworks/Python.framework/Versions/3.10/bin" "$PATH"
 starship init fish | source
 fish_add_path $HOME/.local/bin
 
-# Added by Antigravity
-fish_add_path /Users/tairdy/.antigravity/antigravity/bin
+
