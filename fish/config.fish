@@ -30,8 +30,6 @@ set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/shims $PATH
 
-set -g PATH /Users/tairdy/.deta/bin $PATH
-
 pyenv init - | source
 
 if type -q eza
