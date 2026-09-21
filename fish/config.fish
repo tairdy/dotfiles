@@ -35,7 +35,7 @@ set -g PATH /Users/tairdy/.deta/bin $PATH
 pyenv init - | source
 
 if type -q eza
-    alias ll 'eza -l -g --icons'
+    alias ll 'eza -lasnew -g --icons'
     alias lla 'll -a'
     alias llt 'eza --tree'
     alias ll2 'eza --tree --level=2'

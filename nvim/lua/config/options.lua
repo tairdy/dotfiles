@@ -5,6 +5,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+
+--autoread
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({"FocusGained", "BufEnter"}, {
+  command = "checktime",
+})
+
+
 --config options
 
 vim.opt.expandtab = true

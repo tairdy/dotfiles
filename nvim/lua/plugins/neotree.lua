@@ -8,6 +8,7 @@ return {
   },
   config = function()
     --neotree keymaps
-    vim.keymap.set("n", "<leader>e", ":Neotree filesystem toggle float<CR>")
+    --vim.keymap.set("n", "<leader>e", ":Neotree filesystem toggle float<CR>")
+    vim.keymap.set("n", "<leader>e", ":Neotree toggle right<CR>")
   end,
 }
