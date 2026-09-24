@@ -5,6 +5,11 @@ end
 alias vim='nvim'
 alias python='python3'
 alias pip='pip3'
+
+
+# find command
+alias f='find . -name'
+
 set -gx TERM xterm-256color
 
 set -g fish_greeting ""
